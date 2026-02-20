@@ -37,6 +37,10 @@ public class DefPotion extends Potion{
         return true;
     }
 
+    public String toString() {
+        return getName() + " : use this potion to increase " + getIncreaseDef() + " Def";
+    }
+
     public int getIncreaseDef() {
         return increaseDef;
     }

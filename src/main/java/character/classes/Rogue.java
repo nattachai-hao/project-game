@@ -48,4 +48,8 @@ public class Rogue extends Player {
             setEnergy(getEnergy() - 2);
         }
     }
+
+    public String toString() {
+        return getName() + " -> Hp = " + getHp() + " atk = " + getAttack() + " def = " + getDefense() + " energy = " + getEnergy() + " block = " + getBlock();
+    }
 }

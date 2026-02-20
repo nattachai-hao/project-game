@@ -37,6 +37,10 @@ public class HealingPotion extends Potion{
         return true;
     }
 
+    public String toString() {
+        return getName() + " : use this potion to heal " + getIncreaseHp() + " hp";
+    }
+
     public int getIncreaseHp() {
         return increaseHp;
     }

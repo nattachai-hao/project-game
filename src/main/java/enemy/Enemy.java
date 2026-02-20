@@ -9,4 +9,6 @@ public abstract class Enemy extends Character {
     }
 
     public abstract void performAction(Character target);
+
+    public abstract String toString();
 }

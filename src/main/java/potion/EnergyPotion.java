@@ -35,6 +35,10 @@ public class EnergyPotion extends Potion{
         return true;
     }
 
+    public String toString() {
+        return getName() + " : use this potion to increase " + 1 + " energy";
+    }
+
     public int getBuyCost() {
         return buyCost;
     }

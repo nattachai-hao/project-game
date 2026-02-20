@@ -37,6 +37,10 @@ public class AtkPotion extends Potion{
         return true;
     }
 
+    public String toString() {
+        return getName() + " : use this potion to increase " + getIncreaseAtk() + " Def";
+    }
+
     public int getIncreaseAtk() {
         return increaseAtk;
     }

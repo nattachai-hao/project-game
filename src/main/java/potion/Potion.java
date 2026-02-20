@@ -9,6 +9,14 @@ public abstract class Potion implements Tradable, Useable{
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public abstract boolean buy(Character character);
 
@@ -17,4 +25,6 @@ public abstract class Potion implements Tradable, Useable{
 
     @Override
     public abstract boolean use(Character character);
+
+    public abstract String toString();
 }

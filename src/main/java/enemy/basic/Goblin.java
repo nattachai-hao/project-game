@@ -55,4 +55,9 @@ public class Goblin extends Enemy {
         isCharging = true;
         applyVulnerable(1);
     }
+
+    @Override
+    public String toString() {
+        return getName() + ": Hp = " + getHp();
+    }
 }

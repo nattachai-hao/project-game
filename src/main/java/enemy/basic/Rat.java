@@ -28,4 +28,9 @@ public class Rat extends Enemy {
             normalAttack(target);
         }
     }
+
+    @Override
+    public String toString() {
+        return getName() + ": Hp = " + getHp();
+    }
 }

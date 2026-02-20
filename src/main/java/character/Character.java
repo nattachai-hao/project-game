@@ -107,6 +107,10 @@ public abstract class Character {
         this.inventory = inventory;
     }
 
+    public int getBlock() {
+        return block;
+    }
+
     // Combat System
 
     public void normalAttack(Character target) {
@@ -192,4 +196,5 @@ public abstract class Character {
         setEnergy(getEnergy() + 1);
     }
 
+    public abstract String toString();
 }

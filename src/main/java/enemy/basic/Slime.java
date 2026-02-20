@@ -20,4 +20,9 @@ public class Slime extends Enemy {
 
         normalAttack(target);
     }
+
+    @Override
+    public String toString() {
+        return getName() + ": Hp = " + getHp();
+    }
 }

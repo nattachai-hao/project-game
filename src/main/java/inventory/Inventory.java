@@ -16,20 +16,23 @@ public class Inventory {
         return arrayListPotion;
     }
 
-    public boolean addPotion(Potion potion) {
+    public void addPotion(Potion potion) {
         if(getArrayListPotion().size() < maxPotion) {
             getArrayListPotion().add(potion);
-            return true;
-        }else return false;
+        }
     }
 
-    public boolean removePotion(Potion potion) {
+    public void removePotion(Potion potion) {
         for(int i = 0; i < getArrayListPotion().size(); i++) {
             if(potion.equals(arrayListPotion.get(i))) {
                 arrayListPotion.remove(potion);
-                return true;
+                return;
             }
         }
+    }
+
+    public boolean isEmpty() {
+        if(getArrayListPotion().isEmpty()) return true;
         return false;
     }
 }
