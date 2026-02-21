@@ -7,6 +7,8 @@ import character.classes.Rogue;
 import enemy.basic.Goblin;
 import enemy.basic.Rat;
 import enemy.basic.Slime;
+import enemy.boss.IronGladiator;
+import enemy.boss.RatKing;
 import logic.GameLogic;
 import room.Enemyroom;
 
@@ -88,9 +90,42 @@ public class Main {
             }else if(start == 5) {
                 //boss event
                 System.out.println("===== BOSS ROOM =====");
+                Enemyroom room = new Enemyroom();
+                room.addEnemy(new RatKing());
+                room.addEnemy(new Rat());
+                room.addEnemy(new Rat());
+                boolean gameOver = GameLogic.fight(player, room, input);
+
+                if (gameOver) {
+                    System.out.println("GAME OVER");
+                    input.close();
+                    return;
+                }
+
+                player.upgrade();
+                player.clearEff();
+                player.setGold(player.getGold() + 15);
+                safe = true;
+                System.out.println("Room clear !!!");
             }else if(start == 7) {
                 //boss event
                 System.out.println("===== BOSS ROOM =====");
+                Enemyroom room = new Enemyroom();
+                room.addEnemy(new IronGladiator());
+                room.addEnemy(new RatKing());
+                boolean gameOver = GameLogic.fight(player, room, input);
+
+                if (gameOver) {
+                    System.out.println("GAME OVER");
+                    input.close();
+                    return;
+                }
+
+                player.upgrade();
+                player.clearEff();
+                player.setGold(player.getGold() + 15);
+                safe = true;
+                System.out.println("Room clear !!!");
             }else {
                 System.out.println("Now you have to decide what to do.");
                 System.out.println("1: Enemyroom");
