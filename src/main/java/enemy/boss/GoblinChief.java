@@ -14,10 +14,10 @@ public class GoblinChief extends Goblin {
 
         // Override base goblin stats with boss stats
         setName("Goblin Chief");
-        setMaxHp(30);
-        setHp(30);
-        setAttack(5);
-        setDefense(4);
+        setMaxHp(50);
+        setHp(50);
+        setAttack(6);
+        setDefense(5);
     }
 
     @Override

@@ -7,9 +7,9 @@ public class Mage extends Player {
 
     public Mage(String name) {
         super(name);
-        setMaxHp(17);
-        setHp(17);
-        setAttack(6);
+        setMaxHp(20);
+        setHp(20);
+        setAttack(5);
         setDefense(1);
         setEnergy(1);
     }
@@ -18,7 +18,7 @@ public class Mage extends Player {
     @Override
     public void skill1(Character target) {
         if (getEnergy() >= 1) {
-            int damage = getAttack() + 4;
+            int damage = getAttack() + 3;
             target.takeDamage(damage);
             setEnergy(getEnergy() - 1);
         }
@@ -28,7 +28,7 @@ public class Mage extends Player {
     @Override
     public void skill2(Character target) {
         if (getEnergy() >= 1) {
-            addShield(5);
+            addShield(3);
             setEnergy(getEnergy() - 1);
         }
     }
@@ -48,6 +48,6 @@ public class Mage extends Player {
     }
 
     public void upgrade() {
-        setAttack(getAttack() + 7);
+        setAttack(getAttack() + 6);
     }
 }

@@ -7,10 +7,10 @@ public class Rogue extends Player {
 
     public Rogue(String name) {
         super(name);
-        setMaxHp(19);
-        setHp(19);
+        setMaxHp(23);
+        setHp(23);
         setAttack(5);
-        setDefense(2);
+        setDefense(1);
         setEnergy(0);
     }
 
@@ -18,7 +18,7 @@ public class Rogue extends Player {
     @Override
     public void skill1(Character target) {
         if (getEnergy() >= 1) {
-            int damage = getAttack() + 5;
+            int damage = getAttack() + 3;
 
             if (target.isVulnerable()) {
                 damage = (int)(damage * 1.5);

@@ -7,10 +7,10 @@ public class Slime extends Enemy {
 
     public Slime() {
         super("Slime");
-        setMaxHp(15);
-        setHp(15);
+        setMaxHp(14);
+        setHp(14);
         setAttack(2);
-        setDefense(1);
+        setDefense(0);
     }
 
     @Override

@@ -7,10 +7,10 @@ public class Knight extends Player {
 
     public Knight(String name) {
         super(name);
-        setMaxHp(24);
-        setHp(24);
+        setMaxHp(25);
+        setHp(25);
         setAttack(4);
-        setDefense(3);
+        setDefense(2);
         setEnergy(0);
     }
 
@@ -29,7 +29,7 @@ public class Knight extends Player {
     @Override
     public void skill2(Character target) {
         if (getEnergy() >= 1) {
-            addShield(7);
+            addShield(5);
             setEnergy(getEnergy() - 1);
         }
     }

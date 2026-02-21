@@ -10,8 +10,8 @@ public class Rat extends Enemy {
 
     public Rat() {
         super("Rat");
-        setMaxHp(8);
-        setHp(8);
+        setMaxHp(10);
+        setHp(10);
         setAttack(3);
         setDefense(1);
     }

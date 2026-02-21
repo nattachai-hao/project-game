@@ -11,10 +11,10 @@ public class Goblin extends Enemy {
 
     public Goblin() {
         super("Goblin");
-        setMaxHp(13);
-        setHp(13);
-        setAttack(3);
-        setDefense(2);
+        setMaxHp(15);
+        setHp(15);
+        setAttack(4);
+        setDefense(1);
     }
 
     @Override
@@ -23,7 +23,7 @@ public class Goblin extends Enemy {
         // If charging, unleash heavy attack
         if (isCharging) {
             System.out.println(getName() + " unleashes a HEAVY SLASH!");
-            target.takeDamage(getAttack() + 3);
+            target.takeDamage(getAttack() + 4);
             isCharging = false;
             return;
         }

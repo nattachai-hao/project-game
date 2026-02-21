@@ -4,8 +4,6 @@ import character.Character;
 
 public class AtkPotion extends Potion{
     private int increaseAtk;
-    private int buyCost;
-    private int sellCost;
 
     public AtkPotion(int buyCost) {
         super("AtkPotion");
@@ -38,30 +36,15 @@ public class AtkPotion extends Potion{
     }
 
     public String toString() {
-        return getName() + " : use this potion to increase " + getIncreaseAtk() + " Def";
+        return getName() + " : price = " + getBuyCost() + " use this potion to increase " + getIncreaseAtk() + " Def";
     }
 
     public int getIncreaseAtk() {
         return increaseAtk;
     }
 
-    public int getBuyCost() {
-        return buyCost;
-    }
-
-    public int getSellCost() {
-        return sellCost;
-    }
-
     public void setIncreaseAtk(int increaseAtk) {
         this.increaseAtk = increaseAtk;
     }
 
-    public void setBuyCost(int buyCost) {
-        this.buyCost = buyCost;
-    }
-
-    public void setSellCost(int sellCost) {
-        this.sellCost = sellCost;
-    }
 }

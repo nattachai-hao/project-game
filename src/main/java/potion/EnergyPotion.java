@@ -3,9 +3,6 @@ package potion;
 import character.Character;
 
 public class EnergyPotion extends Potion{
-    private int buyCost;
-    private int sellCost;
-
     public EnergyPotion(int buyCost) {
         super("EnergyPotion");
         setBuyCost(buyCost);
@@ -36,22 +33,6 @@ public class EnergyPotion extends Potion{
     }
 
     public String toString() {
-        return getName() + " : use this potion to increase " + 1 + " energy";
-    }
-
-    public int getBuyCost() {
-        return buyCost;
-    }
-
-    public int getSellCost() {
-        return sellCost;
-    }
-
-    public void setBuyCost(int buyCost) {
-        this.buyCost = buyCost;
-    }
-
-    public void setSellCost(int sellCost) {
-        this.sellCost = sellCost;
+        return getName() + " : price = " + getBuyCost() + " use this potion to increase " + 1 + " energy";
     }
 }

@@ -13,9 +13,9 @@ public class RatKing extends Rat {
         super();
 
         setName("Rat King");
-        setMaxHp(20);
-        setHp(20);
-        setAttack(6);
+        setMaxHp(30);
+        setHp(30);
+        setAttack(5);
         setDefense(2);
     }
 

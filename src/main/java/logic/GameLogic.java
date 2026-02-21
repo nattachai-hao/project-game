@@ -2,6 +2,7 @@ package logic;
 
 import character.Character;
 import character.Player;
+import enemy.basic.Goblin;
 import potion.Potion;
 import room.Enemyroom;
 import room.Shoproom;
@@ -141,7 +142,6 @@ public class GameLogic {
             } else {
                 Potion potion = bag.get(select - 1);
                 potion.use(player);
-                player.getInventory().removePotion(potion);
                 return true;
             }
         }
@@ -214,7 +214,7 @@ public class GameLogic {
     public static void store(Player player, Scanner in) {
         Shoproom shoproom = new Shoproom();
         System.out.println("You have entered the Shop Room");
-        int select = getIntInput(in);
+        int select;
         while (true) {
             for(int i = 0; i < shoproom.getStore().size(); i++) {
                 System.out.println((i+1) + ": " + shoproom.getStore().get(i));
@@ -222,9 +222,9 @@ public class GameLogic {
             System.out.println(shoproom.getStore().size()+1 + ": exit");
             System.out.println("Choose an item to buy");
             System.out.println("your gold is " + player.getGold());
+            select = getIntInput(in);
             if(select <= 0 || select > shoproom.getStore().size()+1) {
                 System.out.println("please select in range");
-                select = getIntInput(in);
             }else if(select == shoproom.getStore().size()+1){
                 System.out.println("Exit the shop");
                 break;
@@ -234,7 +234,6 @@ public class GameLogic {
                 }else {
                     System.out.println("You don't have enough money");
                 }
-                select = getIntInput(in);
             }
         }
     }

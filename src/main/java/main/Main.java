@@ -84,7 +84,7 @@ public class Main {
 
                 player.upgrade();
                 player.clearEff();
-                player.setGold(player.getGold() + 15);
+                player.setGold(player.getGold() + 14);
                 safe = true;
                 System.out.println("Room clear !!!");
             }else if(start == 5) {
@@ -104,7 +104,7 @@ public class Main {
 
                 player.upgrade();
                 player.clearEff();
-                player.setGold(player.getGold() + 15);
+                player.setGold(player.getGold() + 14);
                 safe = true;
                 System.out.println("Room clear !!!");
             }else if(start == 7) {
@@ -123,7 +123,7 @@ public class Main {
 
                 player.upgrade();
                 player.clearEff();
-                player.setGold(player.getGold() + 15);
+                player.setGold(player.getGold() + 14);
                 safe = true;
                 System.out.println("Room clear !!!");
             }else {
@@ -175,7 +175,7 @@ public class Main {
 
                     player.upgrade();
                     player.clearEff();
-                    player.setGold(player.getGold() + 15);
+                    player.setGold(player.getGold() + 14);
 
                     safe = true;
                     System.out.println("Room clear !!!");

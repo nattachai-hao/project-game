@@ -4,8 +4,6 @@ import character.Character;
 
 public class HealingPotion extends Potion{
     private int increaseHp;
-    private int buyCost;
-    private int sellCost;
 
     public HealingPotion(int buyCost) {
         super("HealingPotion");
@@ -38,30 +36,14 @@ public class HealingPotion extends Potion{
     }
 
     public String toString() {
-        return getName() + " : use this potion to heal " + getIncreaseHp() + " hp";
+        return getName() + " : price = " + getBuyCost() + " use this potion to heal " + getIncreaseHp() + " hp";
     }
 
     public int getIncreaseHp() {
         return increaseHp;
     }
 
-    public int getBuyCost() {
-        return buyCost;
-    }
-
-    public int getSellCost() {
-        return sellCost;
-    }
-
     public void setIncreaseHp(int increaseHp) {
         this.increaseHp = increaseHp;
-    }
-
-    public void setBuyCost(int buyCost) {
-        this.buyCost = buyCost;
-    }
-
-    public void setSellCost(int sellCost) {
-        this.sellCost = sellCost;
     }
 }

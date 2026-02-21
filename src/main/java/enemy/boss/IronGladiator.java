@@ -11,10 +11,10 @@ public class IronGladiator extends Enemy {
 
     public IronGladiator() {
         super("Iron Gladiator");
-        setMaxHp(14);
-        setHp(14);
-        setAttack(12);
-        setDefense(10);
+        setMaxHp(35);
+        setHp(35);
+        setAttack(10);
+        setDefense(7);
     }
 
     @Override
