@@ -52,4 +52,11 @@ public class Rogue extends Player {
     public String toString() {
         return getName() + " -> Hp = " + getHp() + " atk = " + getAttack() + " def = " + getDefense() + " energy = " + getEnergy() + " block = " + getBlock();
     }
+
+    public void upgrade() {
+        setMaxHp(getMaxHp() + 2);
+        setHp(getHp() + 2);
+        setDefense(getDefense() + 1);
+        setAttack(getAttack() + 2);
+    }
 }

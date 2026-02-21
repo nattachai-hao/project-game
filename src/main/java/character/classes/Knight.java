@@ -48,4 +48,10 @@ public class Knight extends Player {
     public String toString() {
         return getName() + " -> Hp = " + getHp() + " atk = " + getAttack() + " def = " + getDefense() + " energy = " + getEnergy() + " block = " + getBlock();
     }
+
+    public void upgrade() {
+        setMaxHp(getMaxHp() + 5);
+        setHp(getHp() + 5);
+        setDefense(getDefense() + 1);
+    }
 }

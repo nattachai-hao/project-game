@@ -46,4 +46,8 @@ public class Mage extends Player {
     public String toString() {
         return getName() + " -> Hp = " + getHp() + " atk = " + getAttack() + " def = " + getDefense() + " energy = " + getEnergy() + " block = " + getBlock();
     }
+
+    public void upgrade() {
+        setAttack(getAttack() + 7);
+    }
 }

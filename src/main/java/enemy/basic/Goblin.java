@@ -60,4 +60,8 @@ public class Goblin extends Enemy {
     public String toString() {
         return getName() + ": Hp = " + getHp();
     }
+
+    public boolean isCharging() {
+        return isCharging;
+    }
 }

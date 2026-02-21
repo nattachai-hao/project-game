@@ -197,4 +197,8 @@ public abstract class Character {
     }
 
     public abstract String toString();
+
+    public String eff() {
+        return "vulnerableTurns = " + vulnerableTurns + " poisonTurns = " + poisonTurns + " evadeStacks = " + evadeStacks;
+    }
 }
